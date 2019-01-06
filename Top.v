@@ -45,14 +45,14 @@ module Top(
 	clkdiv m0 (.rst(rst), .clk(clk), .clkdiv(clkdiv));
 	
 	address add1 (
-		.clk(clkdiv[2]),
+		.clk(clkdiv[1]),
 		.col_addr(col_addr),
 		.row_addr(row_addr),
 		.addr(addr)
 	);
 	
 	index_rom rom1 (
-	  .clka(clkdiv[2]), // input clka
+	  .clka(clkdiv[1]), // input clka
 	  .addra(addr), // input [11 : 0] addra
 	  .douta(px_data) // output [23 : 0] douta
 	);
@@ -63,7 +63,7 @@ module Top(
 	);
 	
 	vgac v0 (
-		.vga_clk(clkdiv[2]), .clrn(clrn), .d_in(vga_data), 
+		.vga_clk(clkdiv[1]), .clrn(clrn), .d_in(vga_data), 
 		.row_addr(row_addr), .col_addr(col_addr), 
 		.r(r), .g(g), .b(b), .hs(hs), .vs(vs)
 	);
