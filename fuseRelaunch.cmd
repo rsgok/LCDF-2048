@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "D:/ise_file/backup/VGAdemo/top_sim_isim_beh.exe" -prj "D:/ise_file/backup/VGAdemo/top_sim_beh.prj" "work.top_sim" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "D:/ise_file/backup/VGAdemo/addr_sim_isim_beh.exe" -prj "D:/ise_file/backup/VGAdemo/addr_sim_beh.prj" "work.addr_sim" "work.glbl" 

@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sat Jan 05 17:20:25 2019
+Sun Jan 06 12:21:37 2019
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -55,10 +55,10 @@ Pinout by Pin Number:
 |AA7       |           |IOB18S   |IO_L8N_T1_33                |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
 |AA8       |           |IOB18M   |IO_L8P_T1_33                |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
 |AA9       |           |IOB18M   |IO_L11P_T1_SRCC_33          |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
-|AA10      |SW<0>      |IOB      |IO_L14P_T2_SRCC_33          |INPUT    |LVCMOS15   |33            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|AA10      |clrn       |IOB      |IO_L14P_T2_SRCC_33          |INPUT    |LVCMOS15   |33            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |AA11      |           |         |VCCO_33                     |         |           |33            |          |         |           |         |1.50     |          |           |                |
-|AA12      |SW<3>      |IOB      |IO_L16N_T2_33               |INPUT    |LVCMOS15   |33            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
-|AA13      |SW<2>      |IOB      |IO_L16P_T2_33               |INPUT    |LVCMOS15   |33            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|AA12      |           |IOB18S   |IO_L16N_T2_33               |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
+|AA13      |           |IOB18M   |IO_L16P_T2_33               |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
 |AA14      |           |IOB18M   |IO_L7P_T1_32                |UNUSED   |           |32            |          |         |           |         |         |          |           |                |
 |AA15      |           |IOB18S   |IO_L7N_T1_32                |UNUSED   |           |32            |          |         |           |         |         |          |           |                |
 |AA16      |           |         |GND                         |         |           |              |          |         |           |         |         |          |           |                |
@@ -81,7 +81,7 @@ Pinout by Pin Number:
 |AB7       |           |IOB18M   |IO_L10P_T1_33               |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
 |AB8       |           |         |VCCO_33                     |         |           |33            |          |         |           |         |1.50     |          |           |                |
 |AB9       |           |IOB18S   |IO_L11N_T1_SRCC_33          |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
-|AB10      |SW<1>      |IOB      |IO_L14N_T2_SRCC_33          |INPUT    |LVCMOS15   |33            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|AB10      |rst        |IOB      |IO_L14N_T2_SRCC_33          |INPUT    |LVCMOS15   |33            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |AB11      |           |IOB18M   |IO_L13P_T2_MRCC_33          |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
 |AB12      |           |IOB18M   |IO_L15P_T2_DQS_33           |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
 |AB13      |           |         |GND                         |         |           |              |          |         |           |         |         |          |           |                |
@@ -133,8 +133,8 @@ Pinout by Pin Number:
 |AD7       |           |         |GND                         |         |           |              |          |         |           |         |         |          |           |                |
 |AD8       |           |IOB18S   |IO_L9N_T1_DQS_33            |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
 |AD9       |           |IOB18S   |IO_L12N_T1_MRCC_33          |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
-|AD10      |SW<7>      |IOB      |IO_L20P_T3_33               |INPUT    |LVCMOS15   |33            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
-|AD11      |SW<6>      |IOB      |IO_L19P_T3_33               |INPUT    |LVCMOS15   |33            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|AD10      |           |IOB18M   |IO_L20P_T3_33               |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
+|AD11      |           |IOB18M   |IO_L19P_T3_33               |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
 |AD12      |           |         |VCCO_33                     |         |           |33            |          |         |           |         |1.50     |          |           |                |
 |AD13      |           |IOB18S   |IO_L17N_T2_33               |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
 |AD14      |           |IOB18S   |IO_L8N_T1_32                |UNUSED   |           |32            |          |         |           |         |         |          |           |                |
@@ -157,12 +157,12 @@ Pinout by Pin Number:
 |AE5       |           |IOB18S   |IO_L23N_T3_34               |UNUSED   |           |34            |          |         |           |         |         |          |           |                |
 |AE6       |           |IOB18M   |IO_L23P_T3_34               |UNUSED   |           |34            |          |         |           |         |         |          |           |                |
 |AE7       |           |IOB18M   |IO_L7P_T1_33                |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
-|AE8       |SW<11>     |IOB      |IO_L22P_T3_33               |INPUT    |LVCMOS15   |33            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|AE8       |           |IOB18M   |IO_L22P_T3_33               |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
 |AE9       |           |         |VCCO_33                     |         |           |33            |          |         |           |         |1.50     |          |           |                |
-|AE10      |SW<8>      |IOB      |IO_L20N_T3_33               |INPUT    |LVCMOS15   |33            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|AE10      |           |IOB18S   |IO_L20N_T3_33               |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
 |AE11      |           |IOB18S   |IO_L19N_T3_VREF_33          |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
-|AE12      |SW<9>      |IOB      |IO_L21P_T3_DQS_33           |INPUT    |LVCMOS15   |33            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
-|AE13      |SW<13>     |IOB      |IO_L23P_T3_33               |INPUT    |LVCMOS15   |33            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|AE12      |           |IOB18M   |IO_L21P_T3_DQS_33           |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
+|AE13      |           |IOB18M   |IO_L23P_T3_33               |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
 |AE14      |           |         |GND                         |         |           |              |          |         |           |         |         |          |           |                |
 |AE15      |           |IOB18S   |IO_L4N_T0_32                |UNUSED   |           |32            |          |         |           |         |         |          |           |                |
 |AE16      |           |IOB18S   |IO_L6N_T0_VREF_32           |UNUSED   |           |32            |          |         |           |         |         |          |           |                |
@@ -183,12 +183,12 @@ Pinout by Pin Number:
 |AF5       |           |IOB18M   |IO_L21P_T3_DQS_34           |UNUSED   |           |34            |          |         |           |         |         |          |           |                |
 |AF6       |           |         |VCCO_34                     |         |           |34            |          |         |           |         |any******|          |           |                |
 |AF7       |           |IOB18S   |IO_L7N_T1_33                |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
-|AF8       |SW<12>     |IOB      |IO_L22N_T3_33               |INPUT    |LVCMOS15   |33            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|AF8       |           |IOB18S   |IO_L22N_T3_33               |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
 |AF9       |           |IOB18S   |IO_L24N_T3_33               |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
-|AF10      |SW<15>     |IOB      |IO_L24P_T3_33               |INPUT    |LVCMOS15   |33            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|AF10      |           |IOB18M   |IO_L24P_T3_33               |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
 |AF11      |           |         |GND                         |         |           |              |          |         |           |         |         |          |           |                |
-|AF12      |SW<10>     |IOB      |IO_L21N_T3_DQS_33           |INPUT    |LVCMOS15   |33            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
-|AF13      |SW<14>     |IOB      |IO_L23N_T3_33               |INPUT    |LVCMOS15   |33            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|AF12      |           |IOB18S   |IO_L21N_T3_DQS_33           |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
+|AF13      |           |IOB18S   |IO_L23N_T3_33               |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
 |AF14      |           |IOB18M   |IO_L2P_T0_32                |UNUSED   |           |32            |          |         |           |         |         |          |           |                |
 |AF15      |           |IOB18S   |IO_L2N_T0_32                |UNUSED   |           |32            |          |         |           |         |         |          |           |                |
 |AF16      |           |         |VCCO_32                     |         |           |32            |          |         |           |         |1.80     |          |           |                |
@@ -656,7 +656,7 @@ Pinout by Pin Number:
 |W10       |           |IOB18M   |IO_L3P_T0_DQS_33            |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
 |W11       |           |IOB18S   |IO_L1N_T0_33                |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
 |W12       |           |         |GND                         |         |           |              |          |         |           |         |         |          |           |                |
-|W13       |rstn       |IOB      |IO_25_VRP_32                |INPUT    |LVCMOS18*  |32            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|W13       |           |IOB18    |IO_25_VRP_32                |UNUSED   |           |32            |          |         |           |         |         |          |           |                |
 |W14       |           |IOB18S   |IO_L24N_T3_32               |UNUSED   |           |32            |          |         |           |         |         |          |           |                |
 |W15       |           |IOB18M   |IO_L22P_T3_32               |UNUSED   |           |32            |          |         |           |         |         |          |           |                |
 |W16       |           |IOB18S   |IO_L22N_T3_32               |UNUSED   |           |32            |          |         |           |         |         |          |           |                |
@@ -681,8 +681,8 @@ Pinout by Pin Number:
 |Y9        |           |         |GND                         |         |           |              |          |         |           |         |         |          |           |                |
 |Y10       |           |IOB18S   |IO_L5N_T0_33                |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
 |Y11       |           |IOB18M   |IO_L5P_T0_33                |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
-|Y12       |SW<5>      |IOB      |IO_L18N_T2_33               |INPUT    |LVCMOS15   |33            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
-|Y13       |SW<4>      |IOB      |IO_L18P_T2_33               |INPUT    |LVCMOS15   |33            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|Y12       |           |IOB18S   |IO_L18N_T2_33               |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
+|Y13       |           |IOB18M   |IO_L18P_T2_33               |UNUSED   |           |33            |          |         |           |         |         |          |           |                |
 |Y14       |           |         |VCCO_32                     |         |           |32            |          |         |           |         |1.80     |          |           |                |
 |Y15       |           |IOB18M   |IO_L9P_T1_DQS_32            |UNUSED   |           |32            |          |         |           |         |         |          |           |                |
 |Y16       |           |IOB18S   |IO_L9N_T1_DQS_32            |UNUSED   |           |32            |          |         |           |         |         |          |           |                |

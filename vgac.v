@@ -18,14 +18,14 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module vgac (vga_clk,clrn,d_in,row_addr,col_addr,rdn,r,g,b,hs,vs); // vgac
+module vgac (vga_clk,clrn,d_in,row_addr,col_addr,r,g,b,hs,vs); // vgac
    input     [11:0] d_in;     // bbbb_gggg_rrrr, pixel
    input            vga_clk;  // 25MHz
    input            clrn;
    output reg [8:0] row_addr; // pixel ram row address, 480 (512) lines
    output reg [9:0] col_addr; // pixel ram col address, 640 (1024) pixels
    output reg [3:0] r,g,b; // red, green, blue colors
-   output reg       rdn;      // read pixel RAM (active_low)
+   reg       rdn;      // read pixel RAM (active_low)
    output reg       hs,vs;    // horizontal and vertical synchronization
    // h_count: VGA horizontal counter (0-799)
    reg [9:0] h_count; // VGA horizontal counter (0-799): pixels
