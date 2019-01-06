@@ -1,0 +1,6 @@
+verilog work "vgac.v"
+verilog work "rgbconvert.v"
+verilog work "ipcore_dir/index_rom.v"
+verilog work "AntiJitter.v"
+verilog work "address.v"
+verilog work "Top.v"

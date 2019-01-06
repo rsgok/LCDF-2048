@@ -1,0 +1,674 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.31 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.31 secs
+ 
+--> Reading design: Top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Top"
+Output Format                      : NGC
+Target Device                      : xc7k160t-2L-ffg676
+
+---- Source Options
+Top Module Name                    : Top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\vgac.v" into library work
+Parsing module <vgac>.
+Analyzing Verilog file "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\rgbconvert.v" into library work
+Parsing module <rgbconvert>.
+Analyzing Verilog file "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\ipcore_dir\index_rom.v" into library work
+Parsing module <index_rom>.
+Analyzing Verilog file "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\AntiJitter.v" into library work
+Parsing module <AntiJitter>.
+Analyzing Verilog file "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\address.v" into library work
+Parsing module <address>.
+Analyzing Verilog file "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" into library work
+Parsing module <Top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" Line 91: Port rdn is not connected to this instance
+
+Elaborating module <Top>.
+
+Elaborating module <AntiJitter(WIDTH=4)>.
+
+Elaborating module <address>.
+
+Elaborating module <index_rom>.
+WARNING:HDLCompiler:1499 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\ipcore_dir\index_rom.v" Line 39: Empty module <index_rom> remains a black box.
+WARNING:HDLCompiler:189 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" Line 85: Size mismatch in connection of port <douta>. Formal port size is 24-bit while actual signal size is 1-bit.
+
+Elaborating module <rgbconvert>.
+WARNING:HDLCompiler:189 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" Line 88: Size mismatch in connection of port <indata>. Formal port size is 24-bit while actual signal size is 1-bit.
+
+Elaborating module <vgac>.
+WARNING:Xst:2972 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51. All outputs of instance <a0<1>> of block <AntiJitter> are unconnected in block <Top>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51. All outputs of instance <a0<2>> of block <AntiJitter> are unconnected in block <Top>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51. All outputs of instance <a0<3>> of block <AntiJitter> are unconnected in block <Top>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51. All outputs of instance <a0<4>> of block <AntiJitter> are unconnected in block <Top>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51. All outputs of instance <a0<5>> of block <AntiJitter> are unconnected in block <Top>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51. All outputs of instance <a0<6>> of block <AntiJitter> are unconnected in block <Top>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51. All outputs of instance <a0<7>> of block <AntiJitter> are unconnected in block <Top>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51. All outputs of instance <a0<8>> of block <AntiJitter> are unconnected in block <Top>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51. All outputs of instance <a0<9>> of block <AntiJitter> are unconnected in block <Top>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51. All outputs of instance <a0<10>> of block <AntiJitter> are unconnected in block <Top>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51. All outputs of instance <a0<11>> of block <AntiJitter> are unconnected in block <Top>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51. All outputs of instance <a0<12>> of block <AntiJitter> are unconnected in block <Top>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51. All outputs of instance <a0<13>> of block <AntiJitter> are unconnected in block <Top>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51. All outputs of instance <a0<14>> of block <AntiJitter> are unconnected in block <Top>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51. All outputs of instance <a0<15>> of block <AntiJitter> are unconnected in block <Top>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Top>.
+    Related source file is "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v".
+WARNING:Xst:647 - Input <rstn> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51: Output port <O> of the instance <a0<1>> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51: Output port <O> of the instance <a0<2>> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51: Output port <O> of the instance <a0<3>> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51: Output port <O> of the instance <a0<4>> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51: Output port <O> of the instance <a0<5>> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51: Output port <O> of the instance <a0<6>> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51: Output port <O> of the instance <a0<7>> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51: Output port <O> of the instance <a0<8>> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51: Output port <O> of the instance <a0<9>> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51: Output port <O> of the instance <a0<10>> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51: Output port <O> of the instance <a0<11>> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51: Output port <O> of the instance <a0<12>> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51: Output port <O> of the instance <a0<13>> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51: Output port <O> of the instance <a0<14>> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 51: Output port <O> of the instance <a0<15>> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\Top.v" line 91: Output port <rdn> of the instance <v0> is unconnected or connected to loadless signal.
+    Found 32-bit register for signal <clkdiv>.
+    Found 32-bit adder for signal <clkdiv[31]_GND_1_o_add_1_OUT> created at line 47.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+Unit <Top> synthesized.
+
+Synthesizing Unit <AntiJitter>.
+    Related source file is "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\AntiJitter.v".
+        WIDTH = 4
+    Found 4-bit register for signal <cnt>.
+    Found 1-bit register for signal <O>.
+    Found 4-bit subtractor for signal <cnt[3]_GND_2_o_sub_6_OUT> created at line 39.
+    Found 4-bit adder for signal <cnt[3]_GND_2_o_add_2_OUT> created at line 34.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   5 D-type flip-flop(s).
+Unit <AntiJitter> synthesized.
+
+Synthesizing Unit <address>.
+    Related source file is "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\address.v".
+WARNING:Xst:647 - Input <row_addr<8:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 12-bit register for signal <addr>.
+    Found 12-bit adder for signal <row_addr[5]_GND_3_o_add_1_OUT> created at line 29.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  12 D-type flip-flop(s).
+Unit <address> synthesized.
+
+Synthesizing Unit <rgbconvert>.
+    Related source file is "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\rgbconvert.v".
+WARNING:Xst:647 - Input <indata<3:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <indata<11:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <indata<19:16>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <rgbconvert> synthesized.
+
+Synthesizing Unit <vgac>.
+    Related source file is "C:\Users\TLT3620\Downloads\VGAdemo\VGAdemo\vgac.v".
+    Found 10-bit register for signal <v_count>.
+    Found 9-bit register for signal <row_addr>.
+    Found 10-bit register for signal <col_addr>.
+    Found 1-bit register for signal <rdn>.
+    Found 1-bit register for signal <hs>.
+    Found 1-bit register for signal <vs>.
+    Found 4-bit register for signal <r>.
+    Found 4-bit register for signal <g>.
+    Found 4-bit register for signal <b>.
+    Found 10-bit register for signal <h_count>.
+    Found 10-bit subtractor for signal <col> created at line 56.
+    Found 10-bit adder for signal <h_count[9]_GND_6_o_add_2_OUT> created at line 38.
+    Found 10-bit adder for signal <v_count[9]_GND_6_o_add_8_OUT> created at line 50.
+    Found 9-bit subtractor for signal <row<8:0>> created at line 55.
+    Found 10-bit comparator greater for signal <h_sync> created at line 57
+    Found 10-bit comparator greater for signal <v_sync> created at line 58
+    Found 10-bit comparator greater for signal <GND_6_o_h_count[9]_LessThan_17_o> created at line 59
+    Found 10-bit comparator greater for signal <h_count[9]_PWR_7_o_LessThan_18_o> created at line 60
+    Found 10-bit comparator greater for signal <GND_6_o_v_count[9]_LessThan_19_o> created at line 61
+    Found 10-bit comparator greater for signal <v_count[9]_PWR_7_o_LessThan_20_o> created at line 62
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  54 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <vgac> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 7
+ 10-bit adder                                          : 2
+ 10-bit subtractor                                     : 1
+ 12-bit adder                                          : 1
+ 32-bit adder                                          : 1
+ 4-bit addsub                                          : 1
+ 9-bit subtractor                                      : 1
+# Registers                                            : 14
+ 1-bit register                                        : 4
+ 10-bit register                                       : 3
+ 12-bit register                                       : 1
+ 32-bit register                                       : 1
+ 4-bit register                                        : 4
+ 9-bit register                                        : 1
+# Comparators                                          : 6
+ 10-bit comparator greater                             : 6
+# Multiplexers                                         : 1
+ 10-bit 2-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/index_rom.ngc>.
+Loading core <index_rom> for timing and area information for instance <rom1>.
+WARNING:Xst:1710 - FF/Latch <r_0> (without init value) has a constant value of 0 in block <v0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <r_3> (without init value) has a constant value of 0 in block <v0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <g_0> (without init value) has a constant value of 0 in block <v0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <g_3> (without init value) has a constant value of 0 in block <v0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <b_0> (without init value) has a constant value of 0 in block <v0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <b_3> (without init value) has a constant value of 0 in block <v0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <row_addr_6> of sequential type is unconnected in block <v0>.
+WARNING:Xst:2677 - Node <row_addr_7> of sequential type is unconnected in block <v0>.
+WARNING:Xst:2677 - Node <row_addr_8> of sequential type is unconnected in block <v0>.
+
+Synthesizing (advanced) Unit <AntiJitter>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <AntiJitter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Top>.
+The following registers are absorbed into counter <clkdiv>: 1 register on signal <clkdiv>.
+Unit <Top> synthesized (advanced).
+
+Synthesizing (advanced) Unit <vgac>.
+The following registers are absorbed into counter <h_count>: 1 register on signal <h_count>.
+The following registers are absorbed into counter <v_count>: 1 register on signal <v_count>.
+Unit <vgac> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 10-bit subtractor                                     : 1
+ 12-bit adder                                          : 1
+ 9-bit subtractor                                      : 1
+# Counters                                             : 4
+ 10-bit up counter                                     : 2
+ 32-bit up counter                                     : 1
+ 4-bit updown counter                                  : 1
+# Registers                                            : 47
+ Flip-Flops                                            : 47
+# Comparators                                          : 6
+ 10-bit comparator greater                             : 6
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <r_0> in Unit <vgac> is equivalent to the following 5 FFs/Latches, which will be removed : <r_3> <g_0> <g_3> <b_0> <b_3> 
+INFO:Xst:2261 - The FF/Latch <r_1> in Unit <vgac> is equivalent to the following 5 FFs/Latches, which will be removed : <r_2> <g_1> <g_2> <b_1> <b_2> 
+WARNING:Xst:1710 - FF/Latch <r_0> (without init value) has a constant value of 0 in block <vgac>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <clkdiv_16> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <clkdiv_17> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <clkdiv_18> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <clkdiv_19> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <clkdiv_20> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <clkdiv_21> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <clkdiv_22> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <clkdiv_23> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <clkdiv_24> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <clkdiv_25> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <clkdiv_26> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <clkdiv_27> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <clkdiv_28> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <clkdiv_29> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <clkdiv_30> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <clkdiv_31> of sequential type is unconnected in block <Top>.
+
+Optimizing unit <Top> ...
+
+Optimizing unit <vgac> ...
+
+Optimizing unit <address> ...
+WARNING:Xst:2677 - Node <v0/row_addr_8> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <v0/row_addr_7> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <v0/row_addr_6> of sequential type is unconnected in block <Top>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Top, actual ratio is 0.
+
+Final Macro Processing ...
+
+Processing Unit <Top> :
+	Found 2-bit shift register for signal <add1/addr_0>.
+Unit <Top> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 71
+ Flip-Flops                                            : 71
+# Shift Registers                                      : 1
+ 2-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 170
+#      GND                         : 2
+#      INV                         : 6
+#      LUT1                        : 26
+#      LUT2                        : 17
+#      LUT3                        : 4
+#      LUT4                        : 11
+#      LUT5                        : 13
+#      LUT6                        : 20
+#      MUXCY                       : 33
+#      VCC                         : 2
+#      XORCY                       : 36
+# FlipFlops/Latches                : 72
+#      FD                          : 56
+#      FDCE                        : 10
+#      FDE                         : 5
+#      FDR                         : 1
+# RAMS                             : 3
+#      RAMB36E1                    : 3
+# Shift Registers                  : 1
+#      SRLC16E                     : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 15
+#      IBUF                        : 1
+#      OBUF                        : 14
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7k160tffg676-2l 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              72  out of  202800     0%  
+ Number of Slice LUTs:                   98  out of  101400     0%  
+    Number used as Logic:                97  out of  101400     0%  
+    Number used as Memory:                1  out of  35000     0%  
+       Number used as SRL:                1
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    102
+   Number with an unused Flip Flop:      30  out of    102    29%  
+   Number with an unused LUT:             4  out of    102     3%  
+   Number of fully used LUT-FF pairs:    68  out of    102    66%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                          32
+ Number of bonded IOBs:                  16  out of    400     4%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                3  out of    325     0%  
+    Number using Block RAM only:          3
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 16    |
+clkdiv_15                          | NONE(a0<0>/cnt_0)      | 5     |
+clkdiv_1                           | BUFG                   | 55    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                     | Buffer(FF name)                                                                                                                           | Load  |
+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+-------+
+rom1/N1(rom1/XST_GND:G)            | NONE(rom1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 6     |
+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 2.071ns (Maximum Frequency: 482.847MHz)
+   Minimum input arrival time before clock: 1.277ns
+   Maximum output required time after clock: 0.603ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 1.318ns (frequency: 758.639MHz)
+  Total number of paths / destination ports: 136 / 16
+-------------------------------------------------------------------------
+Delay:               1.318ns (Levels of Logic = 17)
+  Source:            clkdiv_0 (FF)
+  Destination:       clkdiv_15 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: clkdiv_0 to clkdiv_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.236   0.339  clkdiv_0 (clkdiv_0)
+     INV:I->O              1   0.054   0.000  Mcount_clkdiv_lut<0>_INV_0 (Mcount_clkdiv_lut<0>)
+     MUXCY:S->O            1   0.238   0.000  Mcount_clkdiv_cy<0> (Mcount_clkdiv_cy<0>)
+     MUXCY:CI->O           1   0.014   0.000  Mcount_clkdiv_cy<1> (Mcount_clkdiv_cy<1>)
+     MUXCY:CI->O           1   0.014   0.000  Mcount_clkdiv_cy<2> (Mcount_clkdiv_cy<2>)
+     MUXCY:CI->O           1   0.014   0.000  Mcount_clkdiv_cy<3> (Mcount_clkdiv_cy<3>)
+     MUXCY:CI->O           1   0.014   0.000  Mcount_clkdiv_cy<4> (Mcount_clkdiv_cy<4>)
+     MUXCY:CI->O           1   0.014   0.000  Mcount_clkdiv_cy<5> (Mcount_clkdiv_cy<5>)
+     MUXCY:CI->O           1   0.014   0.000  Mcount_clkdiv_cy<6> (Mcount_clkdiv_cy<6>)
+     MUXCY:CI->O           1   0.014   0.000  Mcount_clkdiv_cy<7> (Mcount_clkdiv_cy<7>)
+     MUXCY:CI->O           1   0.014   0.000  Mcount_clkdiv_cy<8> (Mcount_clkdiv_cy<8>)
+     MUXCY:CI->O           1   0.014   0.000  Mcount_clkdiv_cy<9> (Mcount_clkdiv_cy<9>)
+     MUXCY:CI->O           1   0.014   0.000  Mcount_clkdiv_cy<10> (Mcount_clkdiv_cy<10>)
+     MUXCY:CI->O           1   0.014   0.000  Mcount_clkdiv_cy<11> (Mcount_clkdiv_cy<11>)
+     MUXCY:CI->O           1   0.014   0.000  Mcount_clkdiv_cy<12> (Mcount_clkdiv_cy<12>)
+     MUXCY:CI->O           1   0.014   0.000  Mcount_clkdiv_cy<13> (Mcount_clkdiv_cy<13>)
+     MUXCY:CI->O           0   0.014   0.000  Mcount_clkdiv_cy<14> (Mcount_clkdiv_cy<14>)
+     XORCY:CI->O           1   0.262   0.000  Mcount_clkdiv_xor<15> (Result<15>)
+     FD:D                     -0.000          clkdiv_15
+    ----------------------------------------
+    Total                      1.318ns (0.979ns logic, 0.339ns route)
+                                       (74.3% logic, 25.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clkdiv_15'
+  Clock period: 1.438ns (frequency: 695.265MHz)
+  Total number of paths / destination ports: 35 / 10
+-------------------------------------------------------------------------
+Delay:               1.438ns (Levels of Logic = 1)
+  Source:            a0<0>/cnt_0 (FF)
+  Destination:       a0<0>/O (FF)
+  Source Clock:      clkdiv_15 rising
+  Destination Clock: clkdiv_15 rising
+
+  Data Path: a0<0>/cnt_0 to a0<0>/O
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              7   0.236   0.556  a0<0>/cnt_0 (a0<0>/cnt_0)
+     LUT5:I1->O            1   0.043   0.339  a0<0>/_n002311 (a0<0>/_n0023)
+     FDR:R                     0.264          a0<0>/O
+    ----------------------------------------
+    Total                      1.438ns (0.543ns logic, 0.895ns route)
+                                       (37.8% logic, 62.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clkdiv_1'
+  Clock period: 2.071ns (frequency: 482.847MHz)
+  Total number of paths / destination ports: 1027 / 62
+-------------------------------------------------------------------------
+Delay:               2.071ns (Levels of Logic = 12)
+  Source:            v0/v_count_5 (FF)
+  Destination:       v0/v_count_9 (FF)
+  Source Clock:      clkdiv_1 rising
+  Destination Clock: clkdiv_1 rising
+
+  Data Path: v0/v_count_5 to v0/v_count_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             6   0.236   0.631  v0/v_count_5 (v0/v_count_5)
+     LUT5:I0->O            9   0.043   0.395  v0/v_count[9]_PWR_7_o_equal_8_o<9>_SW0 (N01)
+     LUT6:I5->O            1   0.043   0.339  v0/v_count[9]_PWR_7_o_equal_8_o_inv (v0/v_count[9]_PWR_7_o_equal_8_o_inv)
+     MUXCY:CI->O           1   0.014   0.000  v0/Mcount_v_count_cy<0> (v0/Mcount_v_count_cy<0>)
+     MUXCY:CI->O           1   0.014   0.000  v0/Mcount_v_count_cy<1> (v0/Mcount_v_count_cy<1>)
+     MUXCY:CI->O           1   0.014   0.000  v0/Mcount_v_count_cy<2> (v0/Mcount_v_count_cy<2>)
+     MUXCY:CI->O           1   0.014   0.000  v0/Mcount_v_count_cy<3> (v0/Mcount_v_count_cy<3>)
+     MUXCY:CI->O           1   0.014   0.000  v0/Mcount_v_count_cy<4> (v0/Mcount_v_count_cy<4>)
+     MUXCY:CI->O           1   0.014   0.000  v0/Mcount_v_count_cy<5> (v0/Mcount_v_count_cy<5>)
+     MUXCY:CI->O           1   0.014   0.000  v0/Mcount_v_count_cy<6> (v0/Mcount_v_count_cy<6>)
+     MUXCY:CI->O           1   0.014   0.000  v0/Mcount_v_count_cy<7> (v0/Mcount_v_count_cy<7>)
+     MUXCY:CI->O           0   0.014   0.000  v0/Mcount_v_count_cy<8> (v0/Mcount_v_count_cy<8>)
+     XORCY:CI->O           1   0.262   0.000  v0/Mcount_v_count_xor<9> (v0/Mcount_v_count9)
+     FDCE:D                   -0.000          v0/v_count_9
+    ----------------------------------------
+    Total                      2.071ns (0.705ns logic, 1.366ns route)
+                                       (34.1% logic, 65.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clkdiv_15'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              1.277ns (Levels of Logic = 2)
+  Source:            SW<0> (PAD)
+  Destination:       a0<0>/O (FF)
+  Destination Clock: clkdiv_15 rising
+
+  Data Path: SW<0> to a0<0>/O
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   0.000   0.631  SW_0_IBUF (SW_0_IBUF)
+     LUT5:I0->O            1   0.043   0.339  a0<0>/_n002311 (a0<0>/_n0023)
+     FDR:R                     0.264          a0<0>/O
+    ----------------------------------------
+    Total                      1.277ns (0.307ns logic, 0.970ns route)
+                                       (24.0% logic, 76.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clkdiv_1'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              0.603ns (Levels of Logic = 1)
+  Source:            v0/r_1 (FF)
+  Destination:       r<2> (PAD)
+  Source Clock:      clkdiv_1 rising
+
+  Data Path: v0/r_1 to r<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               6   0.236   0.367  v0/r_1 (v0/r_1)
+     OBUF:I->O                 0.000          r_2_OBUF (r<2>)
+    ----------------------------------------
+    Total                      0.603ns (0.236ns logic, 0.367ns route)
+                                       (39.1% logic, 60.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    1.318|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clkdiv_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clkdiv_1       |    2.071|         |         |         |
+clkdiv_15      |    1.347|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clkdiv_15
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clkdiv_15      |    1.438|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 12.61 secs
+ 
+--> 
+
+Total memory usage is 4638820 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   53 (   0 filtered)
+Number of infos    :   19 (   0 filtered)
+

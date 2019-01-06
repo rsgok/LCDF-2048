@@ -1,0 +1,33 @@
+Running: D:\Xlinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o D:/ise_file/backup/VGAdemo/top_sim_isim_beh.exe -prj D:/ise_file/backup/VGAdemo/top_sim_beh.prj work.top_sim work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:/ise_file/backup/VGAdemo/vgac.v" into library work
+Analyzing Verilog file "D:/ise_file/backup/VGAdemo/rgbconvert.v" into library work
+Analyzing Verilog file "D:/ise_file/backup/VGAdemo/ipcore_dir/index_rom.v" into library work
+Analyzing Verilog file "D:/ise_file/backup/VGAdemo/address.v" into library work
+Analyzing Verilog file "D:/ise_file/backup/VGAdemo/Top.v" into library work
+Analyzing Verilog file "D:/ise_file/backup/VGAdemo/top_sim.v" into library work
+Analyzing Verilog file "D:/Xlinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "D:/ise_file/backup/VGAdemo/Top.v" Line 94: Port rdn is not connected to this instance
+Completed static elaboration
+Compiling module address
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_softecc_output_...
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="kinte...
+Compiling module index_rom
+Compiling module rgbconvert
+Compiling module vgac
+Compiling module Top
+Compiling module top_sim
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: 系统找不到指定的路径。, "isim\top_sim_isim_beh.exe.sim\libPortability.dll".
+Compiled 11 Verilog Units
+Built simulation executable D:/ise_file/backup/VGAdemo/top_sim_isim_beh.exe
+Fuse Memory Usage: 32668 KB
+Fuse CPU Usage: 436 ms
